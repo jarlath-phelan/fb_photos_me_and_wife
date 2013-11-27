@@ -1,8 +1,7 @@
 import urllib
-import ast
 
 YOUR_ACCESS_TOKEN='goes here' # https://developers.facebook.com/tools/explorer?fql
-wifes_fb_id=199701180
+wifes_fb_id=99999999999
 
 # fb photos of me
 query = "select object_id from photo_tag where subject=me()"
@@ -12,7 +11,7 @@ url = "https://graph.facebook.com/fql?" + params
 photos_of_me = eval(urllib.urlopen(url).read())
 
 # fb photos of my wife
-query = "select object_id from photo_tag where subject=" + wifes_fb_id
+query = "select object_id from photo_tag where subject=" + str(wifes_fb_id)
 params = urllib.urlencode({'q': query, 'access_token': YOUR_ACCESS_TOKEN})
 
 url = "https://graph.facebook.com/fql?" + params
