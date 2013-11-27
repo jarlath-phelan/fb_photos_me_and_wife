@@ -1,7 +1,7 @@
 import urllib
 import ast
 
-YOUR_ACCESS_TOKEN=''
+YOUR_ACCESS_TOKEN='goes here' # https://developers.facebook.com/tools/explorer?fql
 
 # fb photos of me
 query = "select object_id from photo_tag where subject=me()"
